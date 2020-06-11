@@ -1,0 +1,124 @@
+\documentclass[12pt,std, fleqn]{article}
+
+\usepackage{amsmath,amsthm,amsfonts,amssymb,latexsym, hyperref, changepage}
+
+\newtheorem{theorem} {Theorem}
+
+\newtheorem{definition} {Definition}
+
+
+\begin{document}
+\
+\begin{center}
+\textbf{Caroline McClendon} \\
+\vspace{.6 cm}
+\textbf{Latex Write Up 1} \\
+\textbf{June 12 2020}
+\end{center}
+\vspace{.2 cm}
+
+
+\begin{theorem}[2.1 b]
+Suppose that each of $ a, b$ and $c$ is an integer
+a. $$a + (b + c) = (c + a) + b$$
+\end{theorem} 
+
+\begin{proof}
+\begin{align*}
+a + (b + c)&=(c + a) + b & \\
+       &=a + (c + b) & \text{commutivity of addition}\\
+       &=(a + c) + b & \text{associativity of addition}\\
+       &=(c + a) + b & \text{commutivity of addition}
+\end{align*}
+\end{proof}
+     
+\begin{theorem}[2.1 e] Suppose that each of $a, b$ and $c$ is an integer.
+$$(a+b)^2 = a^2 + 2ab + b^2.$$
+\end{theorem}
+
+\begin{proof} 
+\begin{align*}
+(a+b)^2 &= a^2 + 2ab + b^2 \\
+        &= (a+b)(a+b)  & \text{definition of $x^2$}\\
+        &= (a+b) \cdot a + (a+b) \cdot b & \text{distributive axiom} \\
+        &= a(a+b) + b(a+b) & \text{commutivity of multiplication} \\
+        &= a\cdot a + a\cdot a + b \cdot a + b \cdot b & \text{distributive}\\
+        &= a^2 + a\cdot a + b \cdot a + b^2 & \text{defintion of $x^2$} \\
+        &= a^2 + a\cdot a + a \cdot b + b^2 & \text{commutivity of multiplication}\\
+        &= a^2 + 1ab + 1ab + b^2 &\text{multiplicative identity}\\
+        &= a^2 + (1+1)ab + b^2 & \text{distributive axiom}\\
+        &= a^2 + 2ab + b^2 
+\end{align*}
+\end{proof}
+\pagebreak
+
+\begin{theorem}[2.1 f] Suppose that each of $a, b$ and $c$ is an integer.
+$$0 \cdot a = 0.$$
+\end{theorem}
+
+\begin{proof} 
+\begin{align*}
+0 \cdot a &= 0 \\
+        &= (0 + 0) \cdot a  & \text{additive identity}\\
+        &= 0\cdot a + 0 \cdot a & \text{distributive axiom} \\
+0 \cdot a + (-0\cdot a) &= 0\cdot a + 0 \cdot a + (-0\cdot a) & \text{closure, additive inverse} \\
+     0  &= 0\cdot a + (0 \cdot a + (-0\cdot a)) & \text{associativity of addition}\\
+     0  &= 0\cdot a + 0 & \text{additive inverse} \\
+     0  &= 0 \cdot a & \text{additive identity}\\
+ 0 \cdot a  &= 0 &\text{logic}
+\end{align*}
+\end{proof}
+
+\begin{theorem}[2.1 g] Suppose that each of $a, b$ and $c$ is an integer.
+$$ \mbox{If}\  a+b = 0\  \mbox{and}\  a+c=0, \mbox{then}\  b=c $$.
+\end{theorem}
+\vspace{-1 cm}
+
+\begin{proof} 
+\begin{align*}
+a + b &= a + c & \text{property of equation sign, logic}\\
+-a + a + b &= -a + a + c  & \text{closure, logic}\\
+(-a + a) + b &= (-a + a) + b & \text{associativity} \\
+0 + b &= 0 + c  & \text{additive inverse} \\
+   b  &= c & \text{additive identity}\\
+\end{align*}
+\end{proof}
+\pagebreak
+
+\begin{theorem}[2.1 k] Suppose that each of $a, b$ and $c$ is an integer.
+$$ -0 = 0 $$.
+\end{theorem}
+\vspace{-1 cm}
+
+\begin{proof} 
+\begin{align*}
+-0 &= 0 \\
+   &= (0 + -0)  & \text{additive identity}\\
+&= 0 & \text{additive inverse} \\
+\end{align*}
+\end{proof}
+
+
+\begin{theorem}[3.2] If n $\in \mathbb{N} $ then,
+$$ \sum_{i=1}^{n} i^2 = \dfrac{n(n+1)(2n+1)}{6} $$.
+\end{theorem}
+\vspace{-1 cm}
+
+\begin{proof} 
+\text{Prove}\  $P_{1}$\  \text{is true: (let n = 1)}
+\begin{align*}
+ \text{left side} &=  1^2 = 1\\
+ \text{right side} &= \dfrac{1 \cdot 2 \cdot 3}{6} = 1 \\
+\mbox{Prove}\ P_{N} \to P_{N} + 1 :\\
+\sum_{i=1}^{n} i^2 &= \dfrac{n(n+1)(2n+1)}{6} \\
+\sum_{i=1}^{n+1} i^2 &= \dfrac{n(n+1)(2n+1)}{6} + (n+1)^2 \quad \text{induction hypothesis} \\
+&= \dfrac{n+1(n(2n+1) + 6(n+1))}{6} \\
+&= \dfrac{(n+1)((2n+3)(n+2))}{6} \\
+&= \frac{1}{6}(n+1)(n+2)(2(n+1)+1) 
+\end{align*}
+\end{proof}
+
+
+
+\end{document}
+
